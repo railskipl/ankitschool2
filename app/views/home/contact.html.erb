@@ -1,0 +1,31 @@
+<br><br>
+<table class="a"  align="center" cellpadding="0" cellspacing="0">  
+            <tr>
+                <td colspan="2" align="left" valign="top" class="text">
+                	<h3>Contact Get in touch with us </h3>
+
+	 <%= form_for :reset_password, :html=>{:class=>'form', :id=>'contactform'} do |form| %>
+	 <tr><td>&nbsp;</td></tr>
+     <tr>
+     <td><label for="name">Name:</label></td>
+      <td><%= form.text_field :name %></td>
+      </tr>
+       <tr><td>&nbsp;</td></tr>
+       <tr> 
+         <td><label for="email">Email:</label>
+    	 <td><%= form.text_field :email %>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td>
+             
+         <label for="email">Subject:</label>
+         <td><%= form.text_field :subject %>
+         	 <tr><td>&nbsp;</td></tr>
+       <tr><td>
+         <label for="comments">Message:</label>
+         <td class="a"><%= form.text_area :message, :rows => 6, :cols => 38 %>
+        
+               
+        <p align="left" style="margin: 10px 0pt 0pt 2px;" ><%= submit_tag 'Send' %>
+        <% end %>
+        </table>
+ 

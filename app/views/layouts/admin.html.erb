@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchoolApp2</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+<li><% if controller.controller_name == 'pages' %> 
+		<%= link_to "Pages", admin_pages_path, :class=>"active" %>
+	<% else %> 
+	 	<%= link_to "Pages", admin_pages_path %> 
+	 <% end %>
+</li>
+  <li>
+  	<% if controller.controller_name == 'contacts' %> 
+  	<%= link_to "contacts", admin_contacts_path, :class=>"active" %> 
+  	<% else %> 
+  	<%= link_to "Contacts", admin_contacts_path %> 
+  	<% end %>
+  </li>
+<li>
+<% if admin_signed_in? %> 
+<%= link_to "Sign out", destroy_admin_session_path %> 
+<% else %> 
+<%= link_to "sign in", new_admin_session_path %> &nbsp; 
+<% end %>
+</li>	
+</ul>
+	<%= yield %>
+</body>
+</html>

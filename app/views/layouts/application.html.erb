@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchoolApp2</title>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag "application" %>
+<%= javascript_include_tag "jquery.validate.min" %>
+    <%= csrf_meta_tags %> 
+<style type="text/css">
+ 
+#gallery{
+width:auto;
+height:auto;
+}
+ 
+ #gallery img{
+border:1px solid #FF66CC;
+}
+ 
+a#pics img{
+width:35px;
+height:600px;
+}
+ 
+a:hover#pics img{
+width:auto;
+height:auto;
+}
+			</style>
+</head>
+<body>
+	<div id="wrapper">
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="header-wrapper">
+						<div id="header">
+							<div id="logo">
+								<h1> <a class="title">School Lorem Ipsem</a></h1>
+							</div>
+						</div>
+					</div>
+					<!-- end #header -->
+					<div id="menu-wrapper">
+						<div id="menu">
+							<ul>
+<li><a href=/ >Home</a></li> |
+<li><a href=/pages/3 >About us</a></li> |
+<li><a href=/pages/4 >Academics</a></li> | 
+<li><a href=/pages/8 >Facilities</a></li>|
+<li><a href=/pages/11 >Careers</a></li> | 
+<li><%= link_to "Contacts" ,contacts_path %></li>|
+  <li><a href=/pages/13>Others</a></li>
+   
+
+</ul>
+					</div>
+		</div>
+
+					<!-- end #menu -->
+					<div id="slider_wrapper">
+	<div id="slider">
+		
+		<div id="slides_info">
+			<div class="slide_info one">
+				<h2>Canteen</h2>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, 
+					nisi elit consequat ipsum, nec sagittis sem nibh 
+					id elit. Duis sed odio sit amet nibh vulputate 
+					cursus a sit amet mauris. Morbi accumsan ipsum 
+					velit. 
+				</p>
+				
+			</div>
+			<div class="slide_info two">
+				<h2>School Bus</h2>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, 
+					nisi elit consequat ipsum, nec sagittis sem nibh 
+					id elit. Duis sed odio sit amet nibh vulputate 
+					cursus a sit amet mauris. Morbi accumsan ipsum 
+					velit. 
+				</p>
+
+			</div>
+			<div class="slide_info three">
+				<h2>School Building</h2>
+				<p>Vivamus viverra consectetur odio, ac scelerisque massa placerat ac. Proin pellentesque urna quis nunc aliquam tincidunt. Nulla facilisi. Sed diam metus, porta a luctus in, tristique sit amet justo. Donec malesuada quam in eros fermentum tincidunt. Integer sagittis urna nec turpis mollis non ullamcorper risus consequat. Duis neque quam, placerat vehicula aliquam eget, elementum ac lorem. 
+				</p>
+
+			</div>
+			<div class="slide_info four">
+				<h2>School Library </h2>
+				<p>Maecenas dapibus magna eget quam posuere feugiat. Aliquam semper metus ut mauris sagittis quis consectetur enim elementum. Nulla nec elit id nulla euismod elementum commodo at diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vulputate ullamcorper pretium. Nunc aliquet ultricies felis, sit amet hendrerit augue bibendum at. Phasellus scelerisque elit vitae tortor posuere sed auctor lorem tincidunt. Duis sed tempus augue. In et bibendum sem. In hac habitasse platea dictumst. 
+				</p>
+			</div>
+		</div>
+		
+		<div id="slides_image">
+			<div class="slide one">
+				<%= image_tag "/assets/new school building.jpg",:size => "450x300" %>
+			</div>		
+			<div class="slide two">
+				<%= image_tag "/assets/School Library (1).jpg" ,:size => "450x300" %>
+			</div>		
+			<div class="slide three">				
+				<%= image_tag "/assets/school canteen 1.jpg" ,:size => "450x300" %>
+			</div>		
+			<div class="slide four">				
+				<%= image_tag "/assets/629574cbdfbus-2.jpg",:size => "450x300" %>
+			</div>
+		</div>
+	</div>
+</div>
+				
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#">Welcome to Lorem Ipsem</a></h2>
+							
+							<%= yield %>
+							</div>
+						</div>
+						
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+								<h2>Aliquam tempus</h2>
+								<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+							</li>
+							<li>
+								<h2>Categories</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>Blogroll</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>Archives</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+							
+						</ul>
+					</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 Kunal Infotech Private Limited. All rights reserved. </p>
+</div>
+</body>
+</html>
